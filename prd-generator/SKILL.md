@@ -1,6 +1,6 @@
 ---
 name: prd-generator
-description: This skill should be used when users ask to create a Product Requirements Document (PRD), such as "create a PRD for feature X", "write product requirements document", "帮我创建PRD", or any request involving writing product requirement specifications. It provides structured workflow for collecting requirements and generating comprehensive PRD documents in Chinese.
+description: 当用户要求创建产品要求文档 (PRD) 时，应使用此技能，例如“为功能 X 创建 PRD”、“编写产品要求文档”、“帮我创建 PRD”或任何涉及编写产品要求规范的请求。 它为收集需求和生成全面的中文PRD文档提供了结构化的工作流程。
 ---
 
 # PRD 需求文档生成
