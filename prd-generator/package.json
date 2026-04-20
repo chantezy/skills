@@ -1,0 +1,33 @@
+{
+  "name": "codebuddy-skill-prd-generator",
+  "version": "1.0.0",
+  "description": "PRD需求文档生成技能 - 帮助产品经理创建清晰、可操作的产品需求文档",
+  "main": "install.js",
+  "scripts": {
+    "postinstall": "node install.js"
+  },
+  "keywords": [
+    "codebuddy",
+    "skill",
+    "prd",
+    "product-requirements",
+    "产品需求文档"
+  ],
+  "author": "",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/YOUR_USERNAME/skills-prd-generator.git"
+  },
+  "bugs": {
+    "url": "https://github.com/YOUR_USERNAME/skills-prd-generator/issues"
+  },
+  "homepage": "https://github.com/YOUR_USERNAME/skills-prd-generator#readme",
+  "files": [
+    "SKILL.md",
+    "references/",
+    "install.js",
+    "README.md",
+    "package.json"
+  ]
+}
