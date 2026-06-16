@@ -17,16 +17,6 @@
 
 ---
 
-## 🗂️ Skill 列表
-
-### 1. 需求内容分析（requirements-content-analysis）
-
-### 2. 交互说明文档生成（interaction-spec）
-
-### 3. # PRD 需求文档生成（prd-generator）
-
----
-
 ## 🚀 快速开始
 
 ### 方式一：直接使用（推荐）
@@ -70,16 +60,6 @@ skill-name/
 
 ---
 
-## 🎯 使用场景对照表
-
-| 你想做什么          | 使用哪个 Skill                    | 输入          | 输出         |
-| -------------- | ----------------------------- | ----------- | ---------- |
-| 拿到 PRD 需要做设计分析 | requirements-content-analysis | PRD 文档或需求描述 | 八模块结构化分析报告 |
-| 为设计稿编写交互说明     | interaction-spec              | 设计稿截图或原型链接  | 交互行为说明文档   |
-| 生成PRD文档内容      | prd-generator                 | 需求背景描述      | PRD        |
-
----
-
 ## 💡 最佳实践
 
 **输入准备：**
@@ -88,10 +68,6 @@ skill-name/
 - 明确平台端（移动端 / PC 端 / 多端）
 
 **Skill 组合使用：**
-- 先用 `requirements-content-analysis` 分析需求
-- 再用 `interaction-spec` 为最终方案编写交互说明
+- 多个技能可以组合使用用来解决复杂问题
+- 需要对 AI 输出进行人工审核与调整
 
-**结果优化：**
-- 对 AI 输出进行人工审核与调整
-- 将团队特有的设计规范补充到 `references/` 中
-- 迭代优化 Skill 模板以适应团队工作流
