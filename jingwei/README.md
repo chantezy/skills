@@ -10,7 +10,7 @@
 一个部署在 Claude 上的 Skill，让 AI 在讨论精卫平台相关产品需求时，能够：
 
 - 结合平台现有能力给出**贴合实际**的方案，而不是通用产品建议
-- 主动引用竞品的**成熟设计决策**作为参考（飞书/Notion/语雀/Trello/PingCode 等）
+- 主动引用竞品的**成熟设计决策**作为参考（飞书/Notion/语雀/Trello/PingCode/TAPD/日事清/WPS笔记 等）
 - 按照统一框架推进讨论：定性问题 → 还原场景 → 发散方案 → 给出推荐
 - 适用于文档系统（精卫文档）和项目管理系统（精卫项目管理）两个方向
 
@@ -22,10 +22,15 @@
 product-design-discussion/
 ├── README.md                          # 本文件
 ├── SKILL.md                           # Skill 主文件（框架、规则、触发逻辑）
-└── references/
-    ├── platform-spec.md               # 精卫平台产品规格（现有能力、边界约束）
-    ├── competitors-docs.md            # 文档系统竞品参考（飞书/语雀/石墨/有道/Notion）
-    └── competitors-pm.md              # 项目管理竞品参考（Trello/PingCode/Teambition/Monday）
+├── references/                        # 参考资料
+│   ├── platform-spec.md               # 精卫平台产品规格（现有能力、边界约束）
+│   ├── competitors-docs.md            # 文档系统竞品参考（飞书/语雀/石墨/有道/Notion/WPS笔记）
+│   └── competitors-pm.md              # 项目管理竞品参考（Trello/PingCode/Teambition/Monday/TAPD/日事清）
+└── assets/                            # 静态资源（平台功能截图）
+    ├── doc_dashboard_full.png
+    ├── doc_list_page.png
+    ├── task_management_Kanban.png
+    └── ...
 ```
 
 ---
@@ -65,19 +70,22 @@ Skill 的核心文件，包含：
 - **当前已有能力** vs **暂未明确有的能力**（方案讨论的边界参考）
 
 ### competitors-docs.md
-文档系统 5 个竞品的深度分析：
+文档系统 6 个竞品的深度分析：
 - 飞书云文档（多维表格、行列级权限、共享数据源）
 - 语雀（发布/草稿分离、内链知识网络）
 - 石墨文档（协同编辑体验、权限模式区分）
 - 有道云笔记（AI 功能体系、每日回顾机制）
 - Notion（Database 11 种视图、Synced Block、AI Agent）
+- WPS笔记（AI原生多模态笔记、AI标签替代文件夹、从记录到复用全链路AI）
 
 ### competitors-pm.md
-项目管理 4 个竞品的深度分析：
+项目管理 6 个竞品的深度分析：
 - Trello（极简三层结构、卡片弹层交互、Butler 自动化）
 - PingCode（WIP 限制变红预警、累积流图、默认工作流）
 - Teambition（任务与文件联动、甘特与看板切换）
 - Monday.com（多视图、镜像列、工作量视图、列级权限）
+- TAPD（双流程引擎、DevOps全链路集成、企微深度打通）
+- 日事清（任务+日程+汇报三位一体、自动生成工作日志、极简甘特图）
 
 ---
 
