@@ -32,38 +32,18 @@ jobs:
           node-version: '22'
           registry-url: 'https://registry.npmjs.org'
 
-      - name: Check for skill content changes
-        id: check
-        run: |
-          if git rev-parse HEAD~1 >/dev/null 2>&1; then
-            DIFF=$(git diff --name-only HEAD~1 HEAD -- \
-              'Requirements content analysis/' \
-              'b-design-diverge/' \
-              'interaction-design-eval/' \
-              'interaction-spec/' \
-              'prd-generator/')
-            if [ -z "$DIFF" ]; then
-              echo "skip=true" >> $GITHUB_OUTPUT
-              echo "No skill content changes detected, skipping publish"
-            fi
-          fi
-
       - name: Sync skills
-        if: steps.check.outputs.skip != 'true'
         run: bash mcp-server/scripts/sync-skills.sh
 
       - name: Install dependencies
-        if: steps.check.outputs.skip != 'true'
         working-directory: mcp-server
         run: npm ci
 
       - name: Build
-        if: steps.check.outputs.skip != 'true'
         working-directory: mcp-server
         run: npm run build
 
       - name: Bump version and publish
-        if: steps.check.outputs.skip != 'true'
         working-directory: mcp-server
         run: |
           npm version patch --no-git-tag-version
