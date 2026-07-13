@@ -49,5 +49,3 @@ jobs:
         run: |
           npm version patch --no-git-tag-version
           npm publish --provenance --access public
-        env:
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
