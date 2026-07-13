@@ -18,7 +18,7 @@ const server = new McpServer({
 
 server.tool(
   "list_skills",
-  "列出所有可用的产品设计技能及其触发条件。应先调用此工具了解可用技能，然后根据用户意图选择最匹配的 skill。",
+  "列出所有可用的产品设计技能及其触发条件。使用策略：1. 当用户明确指定技能时，直接调用 get_skill。2. 当用户意图模糊或无法准确匹配时，先调用 list_skills 列出所有技能标题和触发条件，请用户确认选择。3. 当用户只说'帮我设计'、'分析需求'、'写文档'等模糊表述时，必须调用 list_skills 让用户明确选择。",
   {},
   async () => {
     const skills = listSkills();
