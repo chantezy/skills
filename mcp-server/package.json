@@ -1,0 +1,39 @@
+{
+  "name": "@chantezy/mcp-product-design",
+  "version": "0.1.0",
+  "description": "Product design skills MCP server - structured design workflow tools for AI agents",
+  "type": "module",
+  "main": "./dist/index.js",
+  "bin": {
+    "mcp-product-design": "./dist/index.js"
+  },
+  "files": [
+    "dist",
+    "skills"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "sync": "bash scripts/sync-skills.sh",
+    "prepublishOnly": "npm run build"
+  },
+  "keywords": [
+    "mcp",
+    "product-design",
+    "ui-design",
+    "ux-design",
+    "skills",
+    "ai-agent"
+  ],
+  "author": "chantezy",
+  "license": "MIT",
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.22.0",
+    "js-yaml": "^4.1.0",
+    "zod": "^3.24.0"
+  },
+  "devDependencies": {
+    "@types/js-yaml": "^4.0.9",
+    "@types/node": "^22.0.0",
+    "typescript": "^5.8.0"
+  }
+}
