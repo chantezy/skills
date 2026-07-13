@@ -51,6 +51,15 @@ function normalizeSkillDir(name: string): string {
   return name.toLowerCase().replace(/\s+/g, "-");
 }
 
+/**
+ * 净化参考资料文件名，防止路径遍历攻击。
+ * 只允许字母、数字、下划线、连字符，过滤掉所有路径分隔符和特殊字符。
+ */
+function sanitizeRef(ref: string): string | null {
+  const sanitized = ref.replace(/[^a-zA-Z0-9_-]/g, "");
+  return sanitized || null;
+}
+
 export function listSkills(): SkillMeta[] {
   if (!fs.existsSync(SKILLS_DIR)) {
     return [];
@@ -125,6 +134,9 @@ export function getSkill(name: string): SkillDetail | null {
 }
 
 export function getReference(name: string, ref: string): string | null {
+  const safeRef = sanitizeRef(ref);
+  if (!safeRef) return null;
+
   const skills = listSkills();
   const normalized = name.toLowerCase().replace(/\s+/g, "-");
   const skill = skills.find(
@@ -140,14 +152,14 @@ export function getReference(name: string, ref: string): string | null {
     SKILLS_DIR,
     skill.directory,
     "references",
-    `${ref}.md`,
+    `${safeRef}.md`,
   );
   if (!fs.existsSync(refPath)) {
     const tryPath = path.join(
       SKILLS_DIR,
       skill.directory,
       "references",
-      `${ref}`,
+      safeRef,
     );
     if (fs.existsSync(tryPath)) {
       return fs.readFileSync(tryPath, "utf-8");
