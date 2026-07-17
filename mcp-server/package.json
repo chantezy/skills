@@ -28,7 +28,7 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/chantezy/skills"
+    "url": "https://github.com/chantezy/product-skills"
   },
   "dependencies": {
     "@modelcontextprotocol/sdk": "^1.22.0",

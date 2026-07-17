@@ -1,6 +1,6 @@
 # @chantezy/mcp-product-design
 
-产品设计师专用 MCP 服务 —— 将 [chantezy/skills](https://github.com/chantezy/skills) 仓库中的结构化技能通过 MCP 协议暴露给 AI 编码助手。
+产品设计师专用 MCP 服务 —— 将 [chantezy/product-skills](https://github.com/chantezy/product-skills) 仓库中的结构化技能通过 MCP 协议暴露给 AI 编码助手。
 
 ## 可用技能
 
@@ -53,7 +53,7 @@
 
 ## 更新机制
 
-1. 修改 `chantezy/skills` 仓库中的任意 skill 文件
+1. 修改 `chantezy/product-skills` 仓库中的任意 skill 文件
 2. Push 到 main 分支
 3. GitHub Actions 自动检测内容变更，构建并发布到 npm
 4. 重启 IDE 即可自动获取最新版本
